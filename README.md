@@ -24,7 +24,7 @@ See [scrollprize.org](https://scrollprize.org/) for more information about the V
 ### Repository Structure
 
 ```
-s3://<bucket-name>/
+s3://vesuvius-challenge-open-data/
 └── samples/
    ├── PHerc0332/
    ├── PHerc1667/
@@ -221,7 +221,7 @@ import matplotlib.pyplot as plt
 s3 = fsspec.filesystem('s3', anon=False)  # Set anon=True if using public access
 
 # Open an OME-ZARR volume from S3
-store = s3.get_mapper('s3://<bucket-name>/PHerc0332/volumes/20231201141544-3.240um-70keV-masked.zarr/')
+store = s3.get_mapper('s3://vesuvius-challenge-open-data/PHerc0332/volumes/20231201141544-3.240um-70keV-masked.zarr/')
 root = zarr.open(store, mode='r')
 
 # Access data at different resolution levels
@@ -247,7 +247,7 @@ plt.show()
 import tifffile
 
 # Read a specific layer from a surface volume
-with s3.open('s3://<bucket-name>/PHerc0139/segments/20250731185658-z_dbg_gen_09900/surface-volumes/9.362um-1.2m-113keV-volume-20250728140407.tifs/00.tif', 'rb') as f:
+with s3.open('s3://vesuvius-challenge-open-data/PHerc0139/segments/20250731185658-z_dbg_gen_09900/surface-volumes/9.362um-1.2m-113keV-volume-20250728140407.tifs/00.tif', 'rb') as f:
     layer_0 = tifffile.imread(f)
     plt.imshow(layer_0, cmap='gray')
     plt.title('Surface layer 0')

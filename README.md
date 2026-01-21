@@ -62,7 +62,7 @@ volumes/
 
 **Example:**
 
-- `20231201141544-3.240um-70keV-masked.zarr` - 3.24µm resolution scan at 70keV, masked to show only papyrus
+- `20231201141544-3.240um-70keV-masked.zarr` - 3.24um resolution scan at 70keV, masked to show only papyrus
 
 #### Segments
 
@@ -199,7 +199,7 @@ TIFXYZ is implemented and supported by [VC3D](https://github.com/ScrollPrize/vil
 
 ### Web Browser
 
-Navigate to https://<TBD>/ and browse directories (FIXME)
+Start from the Registry landing page: https://registry.opendata.aws/vesuvius-challenge-herculaneum-scrolls/
 
 ### Python S3 Zarr access
 
@@ -211,13 +211,15 @@ To access OME-ZARR volumes directly from S3 using Python, you can use the `zarr`
 uv run examples/zarr_volume_access.py
 ```
 
+If you do not use `uv`, install the dependencies listed at the top of `examples/zarr_volume_access.py` and run `python examples/zarr_volume_access.py`.
+
 ```python
 import zarr
 import fsspec
 import matplotlib.pyplot as plt
 
 # Configure S3 file system access
-s3 = fsspec.filesystem('s3', anon=False)  # Set anon=True if using public access
+s3 = fsspec.filesystem('s3', anon=True)  # Public bucket; set anon=False if using credentials
 
 # Open an OME-ZARR volume from S3
 store = s3.get_mapper('s3://vesuvius-challenge-open-data/PHerc0332/volumes/20231201141544-3.240um-70keV-masked.zarr/')
@@ -270,3 +272,5 @@ For questions or issues with the data:
 ### License
 
 [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+

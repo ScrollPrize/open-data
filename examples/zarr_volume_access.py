@@ -20,7 +20,7 @@ This script demonstrates how to:
 - Visualize volume slices
 - Read TIFF surface volumes from segments
 
-Run with: uv run access_data.py
+Run with: uv run examples/zarr_volume_access.py
 """
 
 import zarr
@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 import tifffile
 
 # Configure S3 file system access
-s3 = fsspec.filesystem('s3', anon=False)  # Set anon=True if using public access
+s3 = fsspec.filesystem('s3', anon=True)  # Public bucket; set anon=False if using credentials
 
 # Open an OME-ZARR volume from S3
 store = s3.get_mapper('s3://vesuvius-challenge-open-data/PHerc0332/volumes/20231201141544-3.240um-70keV-masked.zarr/')

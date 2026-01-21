@@ -25,10 +25,9 @@ See [scrollprize.org](https://scrollprize.org/) for more information about the V
 
 ```
 s3://vesuvius-challenge-open-data/
-└── samples/
-   ├── PHerc0332/
-   ├── PHerc1667/
-   └── ...
+├── PHerc0332/
+├── PHerc1667/
+└── ...
 ```
 
 #### Sample Data Structure
@@ -206,10 +205,10 @@ Navigate to https://<TBD>/ and browse directories (FIXME)
 
 To access OME-ZARR volumes directly from S3 using Python, you can use the `zarr` library along with `fsspec` for remote file system access.
 
-**Runnable example:** See [`access_data.py`](./access_data.py) which can be run with:
+**Runnable example:** See [`zarr_volume_access.py`](examples/zarr_volume_access.py) which can be run with:
 
 ```bash
-uv run access_data.py
+uv run examples/zarr_volume_access.py
 ```
 
 ```python

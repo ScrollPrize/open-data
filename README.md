@@ -237,7 +237,7 @@ print(f"Level 1 shape: {level_1.shape}")
 print(f"Level 2 shape: {level_2.shape}")
 
 # Read a slice from level 1 (good balance of speed and detail)
-slice_data = level_1[1000, :, :]
+slice_data = level_1[2000, :, :]
 
 # Visualize the slice
 plt.figure(figsize=(10, 10))

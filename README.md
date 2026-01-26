@@ -1,5 +1,7 @@
 # Vesuvius Challenge Open Data Documentation
 
+;TLDR [example quick data access notebook](examples/get-to-know-a-dataset.ipynb)
+
 ## Overview
 
 A vast library of papyrus scrolls in ancient Herculaneum was buried beneath twenty meters of volcanic mud and ash during the 79 AD eruption of Mount Vesuvius, carbonized into a fragile but miraculously preserved state. The Vesuvius Challenge uses micro‑CT imaging to study both intact Herculaneum scrolls and detached fragments. Our goal is to virtually unwrap the scrolls from their 3D X‑ray volumes and recover the text hidden inside the scrolls. Detached fragments contain exposed ink and provide ground truth for improving machine‑learning ink detection models.
@@ -235,7 +237,7 @@ print(f"Level 1 shape: {level_1.shape}")
 print(f"Level 2 shape: {level_2.shape}")
 
 # Read a slice from level 1 (good balance of speed and detail)
-slice_data = level_1[1000, :, :]
+slice_data = level_1[2000, :, :]
 
 # Visualize the slice
 plt.figure(figsize=(10, 10))

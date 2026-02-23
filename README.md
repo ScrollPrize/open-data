@@ -269,7 +269,7 @@ For questions or issues with the data:
 
 ### Citation
 
-(to be done if needed)
+Format to be decided
 
 ### License
 

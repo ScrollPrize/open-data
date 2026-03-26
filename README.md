@@ -269,7 +269,7 @@ For questions or issues with the data:
 
 ### Citation
 
-Giorgio Angelotti, Stephen Parsons, Sean Johnson, Elian Rafael Dal Prà, Johannes Rudolph, Paul Tafforeau, Alessandro Mirone, et al. *Vesuvius Challenge - CT Scans of Herculaneum Papyri*. Vesuvius Challenge.
+Giorgio Angelotti, Stephen Parsons, Sean Johnson, Elian Rafael Dal Prà, Johannes Rudolph, Paul Tafforeau, Alessandro Mirone, et al. *Vesuvius Challenge - CT Scans of Herculaneum Papyri*. Vesuvius Challenge. 2026
 
 ### License
 

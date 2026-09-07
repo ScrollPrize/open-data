@@ -32,7 +32,7 @@ import tifffile
 s3 = fsspec.filesystem('s3', anon=True)  # Public bucket; set anon=False if using credentials
 
 # Open an OME-ZARR volume from S3
-store = s3.get_mapper('s3://vesuvius-challenge-open-data/PHerc0332/volumes/20231201141544-3.240um-70keV-masked.zarr/')
+store = s3.get_mapper('s3://vesuvius-challenge-open-data/PHerc0332/volumes/20251211183505-2.399um-0.2m-78keV-masked.zarr/')
 root = zarr.open(store, mode='r')
 
 # Access data at different resolution levels
